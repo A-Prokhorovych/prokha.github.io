@@ -46,13 +46,20 @@ const metrics = [
   ["24/7", "digitale Betreuung"],
 ];
 
-const tokens = [
-  ["Primary", "#9f5cff"],
-  ["Electric", "#3189ff"],
-  ["Signal", "#98ff44"],
-  ["Ink", "#05070a"],
-  ["Cloud", "#edf5ff"],
-  ["Line", "#d8e2ef"],
+const brandColors = [
+  ["Graphite", "#3C3C3C", "Base surface / technical product frame", "dark"],
+  ["White", "#FFFFFF", "Clean content surface and contrast text", "light"],
+  ["Dealer Blue", "#0066FF", "Primary CTA and dealer contact action", "dark"],
+  ["Interface Blue", "#3692F5", "Navigation, highlights and UI feedback", "dark"],
+  ["Render Blue", "#50A1F4", "Product light, links and active states", "dark"],
+  ["Aqua Glass", "#5AF2D8", "AI, motion and glass reflections", "dark"],
+  ["Magenta Pulse", "#E55AF2", "Premium accent and conversion moments", "dark"],
+  ["Wellness Lime", "#AFDA6C", "Training, health and positive progress", "dark"],
+];
+
+const brandGradients = [
+  ["CTA Gradient", "#50A1F4", "#E55AF2", "Used for high-attention actions, campaign moments and premium glow."],
+  ["AI Gradient", "#50A1F4", "#5AF2D8", "Used for AI assistance, interface depth and technical confidence."],
 ];
 
 const productProof = [
@@ -220,7 +227,7 @@ const coverageSlides = [
                 fuer europaeische Kunden zu bauen.
               </p>
             </div>
-            <span class="hero-sequence-caption">PNG sequence · transparent render · graphite hardware · aqua glass</span>
+            <span class="hero-sequence-caption">Ein Render-Ergebnis fuer dieses Projekt</span>
           </div>
         </section>
 
@@ -561,8 +568,45 @@ const coverageSlides = [
           </div>
 
           <div class="brand-color-stage">
-            <img src={`${media}/brandcolor.svg`} alt="Gymera Brandcolor Figma board" loading="lazy" />
-            <p>Brendcolor.svg zeigt die visuelle Spannweite: dunkles Tech-Fundament, Electric Blue, Gruen fuer Aktivitaet und violette CTA-Flächen. Der Block bleibt dunkel, damit die Farben wie eine Produktbuehne wirken, aber die Farbtafeln selbst stehen auf einer hellen Flaeche und bleiben lesbar.</p>
+            <div class="brand-color-heading">
+              <p class="eyebrow">Brand color system</p>
+              <h3>Welche Farben tragen Produkt, Interface und Conversion?</h3>
+              <p>
+                Statt die fehlerhafte SVG-Vorlage zu zeigen, habe ich die verwendeten Farben
+                als nutzbares System neu aufgebaut: Graphit und Weiss als ruhige Basis,
+                Blau fuer Vertrauen und Bedienung, Aqua/Magenta fuer AI und Premium-Motion,
+                Lime fuer Training und Fortschritt.
+              </p>
+            </div>
+
+            <div class="brand-color-grid" aria-label="Gymera brand color roles">
+              {brandColors.map(([name, value, role, tone]) => (
+                <article class={`brand-color-card is-${tone}`} style={`--swatch:${value}`}>
+                  <div class="brand-color-swatch">
+                    <span>{value}</span>
+                  </div>
+                  <div>
+                    <h4>{name}</h4>
+                    <p>{role}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div class="brand-gradient-grid" aria-label="Gymera brand gradients">
+              {brandGradients.map(([name, from, to, role]) => (
+                <article class="brand-gradient-card" style={`--from:${from}; --to:${to}`}>
+                  <div class="brand-gradient-swatch">
+                    <span>{from}</span>
+                    <span>{to}</span>
+                  </div>
+                  <div>
+                    <h4>{name}</h4>
+                    <p>{role}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
 
           <div class="brand-story-grid">
@@ -1386,6 +1430,16 @@ const coverageSlides = [
     border-radius: 0;
     box-shadow: none;
   }
+  .hero-sequence::before {
+    background:
+      linear-gradient(90deg, #000 0%, rgba(0, 0, 0, .86) 4%, transparent 15%, transparent 85%, rgba(0, 0, 0, .86) 96%, #000 100%),
+      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .78) 14%, transparent 42%, rgba(0, 0, 0, .42) 100%);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 4;
+  }
   .hero-sequence-bg {
     background:
       radial-gradient(ellipse at 24% 76%, rgba(159, 92, 255, .22), transparent 26%),
@@ -1433,22 +1487,20 @@ const coverageSlides = [
   .hero-media .hero-sequence-video {
     bottom: 0;
     display: block;
-    height: 88%;
-    left: 50%;
-    object-fit: contain;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
     object-position: center bottom;
-    transform: translateX(-50%);
-    width: min(104%, 1480px);
+    width: 100%;
     z-index: 3;
   }
   .hero-media .hero-sequence-frame {
     bottom: 0;
-    height: 88%;
-    left: 50%;
-    object-fit: contain;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
     object-position: center bottom;
-    transform: translateX(-50%);
-    width: min(104%, 1480px);
+    width: 100%;
     z-index: 2;
   }
   .hero-sequence.is-video-ready .hero-sequence-frame {
@@ -2278,26 +2330,105 @@ const coverageSlides = [
   }
   .brand-color-stage {
     background:
-      radial-gradient(circle at 82% 20%, rgba(80, 161, 250, .18), transparent 30%),
-      radial-gradient(circle at 18% 80%, rgba(152, 255, 68, .12), transparent 28%),
-      #05070a;
+      radial-gradient(circle at 86% 10%, rgba(80, 161, 244, .2), transparent 30%),
+      radial-gradient(circle at 18% 82%, rgba(229, 90, 242, .14), transparent 30%),
+      linear-gradient(180deg, #07090b 0%, #05070a 100%);
     border: 1px solid rgba(255, 255, 255, .12);
     border-radius: var(--radius);
     display: grid;
-    gap: 24px;
+    gap: 22px;
     margin-top: 46px;
     padding: clamp(18px, 4vw, 46px);
   }
-  .brand-color-stage img {
-    background: #edf5ff;
-    border-radius: var(--radius);
-    justify-self: center;
-    max-height: min(74vh, 720px);
-    object-fit: contain;
-    padding: clamp(10px, 2vw, 22px);
-    width: 100%;
+  .brand-color-heading {
+    display: grid;
+    gap: 14px;
+    max-width: 840px;
   }
-  .brand-color-stage p,
+  .brand-color-heading h3 {
+    color: #fff;
+    font-size: clamp(30px, 4.2vw, 56px);
+    line-height: .98;
+    max-width: 720px;
+  }
+  .brand-color-heading .eyebrow {
+    color: rgba(90, 242, 216, .82);
+  }
+  .brand-color-grid,
+  .brand-gradient-grid {
+    display: grid;
+    gap: 12px;
+  }
+  .brand-color-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .brand-gradient-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .brand-color-card,
+  .brand-gradient-card {
+    background: rgba(255, 255, 255, .075);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 8px;
+    display: grid;
+    gap: 16px;
+    min-height: 230px;
+    min-width: 0;
+    padding: 12px;
+  }
+  .brand-color-swatch,
+  .brand-gradient-swatch {
+    align-items: end;
+    border-radius: 6px;
+    display: flex;
+    min-height: 124px;
+    overflow: hidden;
+    padding: 12px;
+  }
+  .brand-color-swatch {
+    background: var(--swatch);
+  }
+  .brand-gradient-swatch {
+    background: linear-gradient(135deg, var(--from), var(--to));
+    justify-content: space-between;
+  }
+  .brand-color-swatch span,
+  .brand-gradient-swatch span {
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 950;
+    letter-spacing: 0;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .brand-color-card.is-dark .brand-color-swatch span,
+  .brand-gradient-swatch span {
+    background: rgba(0, 0, 0, .32);
+    color: #fff;
+    padding: 8px 9px;
+  }
+  .brand-color-card.is-light .brand-color-swatch {
+    border: 1px solid rgba(255, 255, 255, .22);
+  }
+  .brand-color-card.is-light .brand-color-swatch span {
+    background: rgba(60, 60, 60, .1);
+    color: #3c3c3c;
+    padding: 8px 9px;
+  }
+  .brand-color-card h4,
+  .brand-gradient-card h4 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.08;
+  }
+  .brand-color-card p,
+  .brand-gradient-card p {
+    color: rgba(255, 255, 255, .62);
+    font-size: 13px;
+    line-height: 1.48;
+    margin-top: 8px;
+  }
+  .brand-color-heading p,
   .usage-stage-copy p {
     color: rgba(255, 255, 255, .68);
     font-size: 14px;
@@ -2996,6 +3127,7 @@ const coverageSlides = [
     .render-gallery { grid-template-columns: 1fr; }
     .render-main { grid-row: auto; }
     .proof-grid, .flow-grid, .brand-map-grid, .usage-compare-grid, .coverage-layout, .brief-grid, .source-grid, .immersion-grid, .brand-story-grid, .motor-system-stage, .technical-process-grid { grid-template-columns: repeat(2, 1fr); }
+    .brand-color-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .brief-section, .motor-system-stage, .technical-video-layout, .rescue-artifact-grid { grid-template-columns: 1fr; }
     .figma-screen-grid { grid-template-columns: 1fr; }
     .map-pan-track { height: min(62vh, 620px); }
@@ -3016,13 +3148,21 @@ const coverageSlides = [
     .hero-copy, .contribution-section, .highlights, .result { grid-template-columns: minmax(0, 1fr); }
     .hero-copy > *, .section-copy > *, .result-copy > * { min-width: 0; max-width: 100%; }
     .hero-copy .eyebrow, .contribution-grid, .highlight-grid { grid-column: 1; }
-    .quick-grid, .contribution-grid, .segment-grid, .metric-grid, .dashboard-layout, .highlight-grid, .proof-grid, .flow-grid, .figma-screen-grid, .brand-map-grid, .usage-compare-grid, .coverage-layout, .interlude-section, .brief-grid, .source-grid, .immersion-grid, .brand-story-grid, .einsatz-layout, .motor-system-stage, .technical-process-grid, .technical-video-layout { grid-template-columns: 1fr; }
+    .quick-grid, .contribution-grid, .segment-grid, .metric-grid, .dashboard-layout, .highlight-grid, .proof-grid, .flow-grid, .figma-screen-grid, .brand-map-grid, .usage-compare-grid, .coverage-layout, .interlude-section, .brief-grid, .source-grid, .immersion-grid, .brand-story-grid, .einsatz-layout, .motor-system-stage, .technical-process-grid, .technical-video-layout, .brand-color-grid, .brand-gradient-grid { grid-template-columns: 1fr; }
     .section-number { display: none; }
     .hero-media img, .wide-frame img { aspect-ratio: 4 / 3; }
     .context-frame img { aspect-ratio: 4 / 3; }
     .figma-screen-grid img { aspect-ratio: 4 / 3; }
     .figma-screen-grid figcaption { min-height: 0; }
     .brand-color-stage { padding: 14px; }
+    .brand-color-card,
+    .brand-gradient-card {
+      min-height: 0;
+    }
+    .brand-color-swatch,
+    .brand-gradient-swatch {
+      min-height: 112px;
+    }
     .map-pan-track { height: 360px; }
     .map-pan-track { --map-slide-width: 420%; }
     .interlude-section { gap: 28px; }
@@ -3052,7 +3192,7 @@ const coverageSlides = [
     .hero-media .hero-sequence-frame {
       bottom: 0;
       height: 100%;
-      width: 160%;
+      width: 100%;
     }
     .hero-sequence-copy {
       left: 18px;

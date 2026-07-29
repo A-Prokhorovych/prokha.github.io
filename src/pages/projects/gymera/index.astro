@@ -68,18 +68,11 @@ const productProof = [
   ["Website-ready story", "Die Produktinszenierung funktioniert als Hero, Motion-Clip, WebGL/canvas Szene und als Beweis fuer eine hochwertigere Markenrichtung."],
 ];
 
-const caseFlow = [
-  ["01", "Ausgangslage", "Der Kunde wollte das chinesische KI-Trainingsgeraet als Partner oder Distributor in Europa verkaufen."],
-  ["02", "Problem", "Es gab kein eigenes Geraet, kein Shooting und nur schwaches Originalmaterial aus chinesischen Produktquellen."],
-  ["03", "Strategie", "Ich habe Material recherchiert, neu inszeniert und daraus eine europaeische Premium-Fitness-Tech-Erzaehlung gebaut."],
-  ["04", "System", "Website, Segmentseiten, AI-Funktionen, Brand Story, Service-Map und Dealer-CTA wurden als ein Vertriebsprodukt gedacht."],
-];
-
 const briefCards = [
   ["Business context", "Der Kunde wollte ein bestehendes chinesisches AI-Fitnessgeraet nach Europa bringen und als lokaler Partner, Distributor oder Dealer auftreten."],
   ["Main constraint", "Das Geraet war nicht verfuegbar. Es gab kein eigenes Fotoshooting, keine europaeischen Lifestyle-Bilder und nur begrenzt belastbare Produktassets."],
   ["Design challenge", "Meine Aufgabe war, aus offenen Quellen, 3D/AI-Visuals und Figma-Frames eine praesentable europaeische Produktwelt zu bauen."],
-  ["Hiring signal", "Der Case zeigt Research, Art Direction, Informationsarchitektur und Business-Denken unter realen Constraints."],
+  ["Design scope", "Der Case fuehrt durch Recherche, visuelle Richtung, Seitenlogik und Entscheidungen, die aus sehr begrenztem Material entstanden sind."],
 ];
 
 const sourceStrategy = [
@@ -100,8 +93,12 @@ const figmaScreens = [
 ];
 
 const rescueSlides = [
-  ["Blender product preview", "blender-renders/gymera-competitor-style-dark-studio.png"],
-  ["Source hero with original photoshoot", "source-hero-standard-photoshoot.jpg"],
+  ["Client source photo", "source-material-photo-01.jpeg"],
+  ["Client source detail", "source-material-photo-02.jpeg"],
+  ["Raw 3D preview", "blender-renders/gymera-main-blender.png"],
+  ["Open model preview", "blender-renders/gymera-open-blender.png"],
+  ["Closed model preview", "blender-renders/gymera-closed-blender.png"],
+  ["Original feature overview", "technical-data-first-concept.png"],
 ];
 
 const featureBridgeSlides = [
@@ -193,7 +190,7 @@ const coverageSlides = [
           <a href="#ueberblick">01 Website</a>
           <a href="#beitrag">02 Beitrag</a>
           <a href="#produkt">03 Produkt</a>
-          <a href="#technical-story">04 Technical Story</a>
+          <a href="#technical-story">04 Motion Format</a>
           <a href="#app">05 App UI</a>
           <a href="#kit">06 Design Kit</a>
         </nav>
@@ -273,8 +270,7 @@ const coverageSlides = [
             <p>
               Weil kein eigenes Produkt fuer Foto oder Video verfuegbar war, musste ich zuerst klaeren,
               welche Quellen ueberhaupt tragfaehig waren: 3D-nahe Produktansichten, einzelne Hero-Motive
-              und Rohmaterial aus der chinesischen Kommunikation. Dieser Block zeigt bewusst nur die
-              Materialbasis, nicht schon die fertige Story.
+              und Rohmaterial aus der chinesischen Kommunikation.
             </p>
           </div>
 
@@ -284,7 +280,7 @@ const coverageSlides = [
                 <img src={`${media}/${image}`} alt={`Gymera visual reconstruction: ${label}`} loading="lazy" />
               ))}
             </div>
-            <figcaption>Asset rescue · Blender-Preview und Originalmaterial als Grundlage fuer die neue Produktinszenierung</figcaption>
+            <figcaption>Asset rescue · rohe Kundenmaterialien und unfertige 3D-Previews als Ausgangspunkt</figcaption>
           </figure>
         </section>
 
@@ -310,104 +306,15 @@ const coverageSlides = [
           </div>
         </section>
 
-        <section class="motor-system-section" aria-labelledby="motor-system-title">
-          <div class="section-copy">
-            <p class="eyebrow">AI resistance system</p>
-            <h2 id="motor-system-title">Warum musste der Motor erklaert werden?</h2>
-            <p>
-              Viele Besucher verstehen ein AI-Fitnessgeraet zuerst ueber den grossen Screen.
-              Fuer den Verkauf war aber wichtig, den Kern dahinter zu erklaeren: Motorrollen,
-              adaptive Assistance und digital gesteuerter Widerstand. Ich habe deshalb vorhandenes
-              Kampagnenmaterial als technischen Beweis eingebunden und daraus eine Bruecke zur
-              spaeteren Website-Story gebaut.
-            </p>
-          </div>
-
-          <div class="motor-system-stage" aria-label="Gymera motor system video proof">
-            <figure class="motor-video-frame">
-              <video autoplay muted loop playsinline preload="auto" poster={`${media}/motor-demo/gymera-motor-indiegogo-poster.jpg`}>
-                <source src={`${media}/motor-demo/gymera-motor-indiegogo.mp4`} type="video/mp4" />
-              </video>
-              <figcaption>Campaign source · Motorrollen und adaptive assistance im Produktkern</figcaption>
-            </figure>
-            <div class="motor-callouts">
-              <article>
-                <span>01</span>
-                <h3>Real mechanism</h3>
-                <p>Der Clip zeigt echte Motorrollen statt einer abstrakten Illustration. Dadurch wird die Hardware glaubwuerdiger.</p>
-              </article>
-              <article>
-                <span>02</span>
-                <h3>Adaptive assistance</h3>
-                <p>Das Interface macht sichtbar, dass Widerstand und Unterstuetzung digital gesteuert werden koennen.</p>
-              </article>
-              <article>
-                <span>03</span>
-                <h3>Story bridge</h3>
-                <p>So entsteht die Bruecke zwischen Produkttechnik, AI-Versprechen und den spaeteren Website- und App-Screens.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="technical-story" class="technical-story-section" aria-labelledby="technical-story-title">
-          <div class="section-copy">
-            <p class="eyebrow">Technical storytelling</p>
-            <h2 id="technical-story-title">Welches technische Ausgangsbild war vorhanden?</h2>
-            <p>
-              Die erste Grundlage war eine einfache Feature-Uebersicht mit sechs Detailkreisen.
-              Sie war inhaltlich brauchbar, aber visuell noch nicht stark genug fuer eine europaeische
-              Premium-Produktpraesentation.
-            </p>
-          </div>
-
-          <figure class="technical-process-card technical-process-card-source technical-source-single">
-            <img
-              src={`${media}/technical-data-first-concept.png`}
-              alt="Erstes Ausgangsbild mit sechs Gymera Feature-Kreisen und englischen Beschriftungen"
-              loading="lazy"
-            />
-            <figcaption>
-              <strong>Ausgangsmaterial</strong>
-              <span>Dieses Feature-Bild war der Startpunkt fuer die spaetere Infografik und das Motion-Video.</span>
-            </figcaption>
-          </figure>
-        </section>
-
-        <section class="technical-infographic-section" aria-labelledby="technical-infographic-title">
-          <div class="section-copy">
-            <p class="eyebrow">Static format</p>
-            <h2 id="technical-infographic-title">Wie wurde daraus ein ruhiges Infografik-Modul?</h2>
-            <p>
-              Fuer Website, Pitch und Booklet brauchte es ein klares Standbild: kurze Texte,
-              eine starke Produktansicht und sechs technische Punkte, die ohne Animation sofort
-              verstanden werden.
-            </p>
-          </div>
-
-          <div class="technical-static-layout">
-            <figure class="technical-process-card technical-process-card-infographic">
-              <img
-                src={`${media}/technical-data-infographic.jpg`}
-                alt="Gymera Technische Daten Infografik fuer Website und Booklet"
-                loading="lazy"
-              />
-              <figcaption>
-                <strong>Infografik fuer Web und Print</strong>
-                <span>Die Infografik funktioniert als statischer Abschnitt auf der Website und als wiederverwendbares Motiv fuer Booklets.</span>
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section class="technical-motion-section" aria-labelledby="technical-motion-title">
+        <section id="technical-story" class="technical-motion-section" aria-labelledby="technical-motion-title">
           <div class="section-copy">
             <p class="eyebrow">Motion format</p>
             <h2 id="technical-motion-title">Wie wurde daraus ein 3D-Motion-Modul?</h2>
             <p>
               Fuer die Website habe ich dieselben Feature-Punkte als Makrokamera-Flug gedacht.
-              Die Kamera stoppt nacheinander bei Rollen, Klappmechanismus, Armen, Mikrofon, Kamera
-              und Screen, damit technische Details wie eine Premium-Produktdemo wirken.
+              Dafuer musste ich mich in Blender einarbeiten, die vorhandenen unfertigen 3D-Modelle
+              neu ausleuchten, Render und Animation bauen und die Stops spaeter mit Texten und
+              Markierungen in After Effects ergaenzen.
             </p>
           </div>
 
@@ -440,6 +347,32 @@ const coverageSlides = [
           </div>
         </section>
 
+        <section class="technical-infographic-section" aria-labelledby="technical-infographic-title">
+          <div class="section-copy">
+            <p class="eyebrow">Static format</p>
+            <h2 id="technical-infographic-title">Wie wurde daraus ein ruhiges Infografik-Modul?</h2>
+            <p>
+              Nach Kundenwunsch wurde aus der bewegten 3D-Idee ein statischer Block entwickelt:
+              ein klares Standbild mit kurzer Feature-Erklaerung, das auf der Website, in Booklets
+              und in gedruckten Unterlagen funktionieren kann.
+            </p>
+          </div>
+
+          <div class="technical-static-layout">
+            <figure class="technical-process-card technical-process-card-infographic">
+              <img
+                src={`${media}/technical-data-infographic.jpg`}
+                alt="Gymera Technische Daten Infografik fuer Website und Booklet"
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Infografik fuer Web und Print</strong>
+                <span>Die Infografik funktioniert als statischer Abschnitt auf der Website und als wiederverwendbares Motiv fuer Booklets.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section class="source-strategy-section" aria-labelledby="source-strategy-title">
           <div class="section-copy">
             <p class="eyebrow">Process</p>
@@ -460,6 +393,13 @@ const coverageSlides = [
               </article>
             ))}
           </div>
+        </section>
+
+        <section class="media-break late-interlude-section media-break-rowing" aria-label="Immersive rowing visual">
+          <img src={`${media}/rowing-interlude.jpg`} alt="Gymera Ruderszene auf dem Wasser als immersive Trainingswelt" loading="lazy" />
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src={`${media}/rowing-interlude-small.mp4`} type="video/mp4" />
+          </video>
         </section>
 
         <section class="reel-section" aria-labelledby="reel-title">
@@ -489,25 +429,11 @@ const coverageSlides = [
           </div>
         </section>
 
-        <section class="flow-section" aria-labelledby="flow-title">
-          <div class="section-copy">
-            <p class="eyebrow">Case Aufbau</p>
-            <h2 id="flow-title">Die Story fuehrt von Hardware zu Interface</h2>
-            <p>
-              Der Case ist so aufgebaut, dass Recruiter oder Kunden den Denkprozess schnell
-              erkennen: erst Produkt und Kontext, dann die visuelle Richtung, danach Website,
-              App-Logik und Designsystem.
-            </p>
-          </div>
-          <div class="flow-grid">
-            {caseFlow.map(([number, title, text]) => (
-              <article>
-                <span>{number}</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
+        <section class="media-break website-motion-break" aria-label="Gymera immersive yoga visual">
+          <img src={`${media}/interlude-1.jpg`} alt="Atmosphaerische Gymera Yoga-Visualisierung" loading="lazy" />
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src={`${media}/interlude-video-small.mp4`} type="video/mp4" />
+          </video>
         </section>
 
         <section class="figma-system-section" aria-labelledby="figma-system-title">
@@ -522,36 +448,11 @@ const coverageSlides = [
             </p>
           </div>
 
-          <figure class="context-frame">
-            <img src={`${media}/figma-gym-context.jpg`} alt="Gymera in einem hellen Fitnessraum als Einsatzkontext" loading="lazy" />
-            <figcaption>Context frame · gym environment and product placement</figcaption>
-          </figure>
-
           <figure class="homepage-scroll-frame">
             <div class="homepage-scroll-window">
               <img src={`${media}/figma-home.jpg`} alt="Gymera homepage system scrolling from hero to footer" loading="eager" />
             </div>
             <figcaption>Homepage system · automatischer Scroll vom Einstieg bis zum Seitenende</figcaption>
-          </figure>
-
-          <div class="figma-screen-grid">
-            {figmaScreens.map(([title, image, position, text]) => (
-              <figure>
-                <img src={`${media}/${image}`} alt={`Gymera Figma screen: ${title}`} loading="lazy" style={`--screen-position: ${position}`} />
-                <figcaption>
-                  <strong>{title}</strong>
-                  <span>{text}</span>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-
-          <figure class="interlude-poster interlude-poster-main figma-motion-insert">
-            <img src={`${media}/interlude-1.jpg`} alt="Atmosphaerische Gymera Yoga-Visualisierung" loading="lazy" />
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src={`${media}/interlude-video-small.mp4`} type="video/mp4" />
-            </video>
-            <figcaption>Kleinen Motion Einsatz · bewusst klein gehalten wegen Source-Qualitaet</figcaption>
           </figure>
         </section>
 
@@ -572,10 +473,9 @@ const coverageSlides = [
               <p class="eyebrow">Brand color system</p>
               <h3>Welche Farben tragen Produkt, Interface und Conversion?</h3>
               <p>
-                Statt die fehlerhafte SVG-Vorlage zu zeigen, habe ich die verwendeten Farben
-                als nutzbares System neu aufgebaut: Graphit und Weiss als ruhige Basis,
-                Blau fuer Vertrauen und Bedienung, Aqua/Magenta fuer AI und Premium-Motion,
-                Lime fuer Training und Fortschritt.
+                Die Farbpalette trennt klare Aufgaben: Graphit und Weiss bilden die ruhige Basis,
+                Blau traegt Vertrauen und Bedienung, Aqua und Magenta markieren AI, Premium-Motion
+                und digitale Tiefe, Lime steht fuer Training und Fortschritt.
               </p>
             </div>
 
@@ -607,6 +507,10 @@ const coverageSlides = [
                 </article>
               ))}
             </div>
+
+            <article class="type-card brand-type-card">
+              <img src={`${media}/fonts-w.svg`} alt="Gymera typography system with font examples" loading="lazy" />
+            </article>
           </div>
 
           <div class="brand-story-grid">
@@ -618,12 +522,61 @@ const coverageSlides = [
             </figure>
           </div>
 
-          <figure class="map-pan-frame">
-            <div class="map-pan-track">
-              <img src={`${media}/map.svg`} alt="Gymera sitemap map showing page structure and content routes" loading="eager" />
-              <img src={`${media}/map.svg`} alt="" loading="eager" aria-hidden="true" />
+          <figure class="sitemap-graph-frame">
+            <img class="sitemap-graph-logo" src={`${media}/logo.svg`} alt="" loading="lazy" aria-hidden="true" />
+            <div class="sitemap-graph" aria-label="Gymera sitemap graph">
+              <svg class="sitemap-lines" viewBox="0 0 100 62" aria-hidden="true" preserveAspectRatio="none">
+                <path d="M50 31 L24 12 M50 31 L48 10 M50 31 L73 13 M50 31 L20 31 M50 31 L80 30 M50 31 L30 50 M50 31 L52 53 M50 31 L76 50" />
+                <path d="M24 12 L48 10 L73 13 M20 31 L30 50 L52 53 L76 50 L80 30" />
+                <path d="M48 10 L80 30 M73 13 L76 50 M20 31 L24 12" />
+              </svg>
+              <div class="graph-node graph-node-core" style="--x:50%; --y:50%;">
+                <span>Core</span>
+                <strong>Gymera</strong>
+              </div>
+              <div class="graph-node" style="--x:24%; --y:16%;">
+                <span>Entry</span>
+                <strong>Homepage</strong>
+              </div>
+              <div class="graph-node" style="--x:48%; --y:12%;">
+                <span>Product</span>
+                <strong>Funktionen</strong>
+              </div>
+              <div class="graph-node" style="--x:73%; --y:17%;">
+                <span>AI layer</span>
+                <strong>KI-Funktionen</strong>
+              </div>
+              <div class="graph-node" style="--x:20%; --y:50%;">
+                <span>Control</span>
+                <strong>Training Dashboard</strong>
+              </div>
+              <div class="graph-node" style="--x:80%; --y:48%;">
+                <span>Conversion</span>
+                <strong>Kaufen</strong>
+              </div>
+              <div class="graph-node" style="--x:30%; --y:80%;">
+                <span>Segments</span>
+                <strong>Einsatzbereiche</strong>
+              </div>
+              <div class="graph-node" style="--x:52%; --y:84%;">
+                <span>Trust</span>
+                <strong>Showrooms</strong>
+              </div>
+              <div class="graph-node" style="--x:76%; --y:78%;">
+                <span>Support</span>
+                <strong>Service</strong>
+              </div>
+              <div class="graph-node graph-node-small" style="--x:13%; --y:68%;">
+                <strong>Technische Daten</strong>
+              </div>
+              <div class="graph-node graph-node-small" style="--x:88%; --y:66%;">
+                <strong>Ueber uns</strong>
+              </div>
+              <div class="graph-node graph-node-small" style="--x:62%; --y:32%;">
+                <strong>Brand Story</strong>
+              </div>
             </div>
-            <figcaption>Map.svg · Sitemap, Seitenlogik und Navigationsarchitektur fuer die Produktwebsite</figcaption>
+            <figcaption>Sitemap graph · Seitenlogik als Obsidian-artige Struktur auf Gymera Brand-Hintergrund</figcaption>
           </figure>
         </section>
 
@@ -680,10 +633,19 @@ const coverageSlides = [
             </p>
           </div>
           <div class="coverage-showroom-stage">
-            <div class="auto-slider coverage-slider">
-              {coverageSlides.map(([label, image]) => (
-                <img src={`${media}/${image}`} alt={`Gymera sales coverage: ${label}`} loading="eager" />
-              ))}
+            <div class="laptop-mockup" aria-label="Gymera sales coverage laptop mockup">
+              <div class="laptop-topbar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="laptop-screen">
+                <div class="auto-slider coverage-slider">
+                  {coverageSlides.map(([label, image]) => (
+                    <img src={`${media}/${image}`} alt={`Gymera sales coverage: ${label}`} loading="eager" />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -749,15 +711,7 @@ const coverageSlides = [
           </figure>
         </section>
 
-        <section class="metrics-section" aria-label="Produktmetriken">
-          <div class="metric-grid">
-            {metrics.map(([value, label]) => (
-              <article>
-                <strong>{value}</strong>
-                <span>{label}</span>
-              </article>
-            ))}
-          </div>
+        <section class="render-background-section" aria-label="Gymera dark studio render background" style={`--render-bg:url("${media}/blender-renders/gymera-competitor-style-dark-studio.png")`}>
         </section>
 
         <section id="app" class="app-section">
@@ -860,27 +814,25 @@ const coverageSlides = [
           <div class="kit-grid">
             <article class="component-card">
               <h3>Components</h3>
-              <button type="button">Start workout</button>
-              <button class="secondary" type="button">View analytics</button>
-              <div class="mini-card">
-                <span>AI recommendation</span>
-                <strong>Reduce load by 8%</strong>
-                <p>Detected asymmetry in the last set.</p>
+              <div class="button-state-grid" aria-label="Button component states">
+                <button type="button">Default</button>
+                <button class="is-hover" type="button">Hover</button>
+                <button class="is-active" type="button">Active</button>
+              </div>
+              <div class="component-state-grid" aria-label="AI card component states">
+                <div class="mini-card">
+                  <span>AI recommendation</span>
+                  <strong>Reduce load by 8%</strong>
+                  <p>Detected asymmetry in the last set.</p>
+                </div>
+                <div class="mini-card is-card-hover">
+                  <span>Hover state</span>
+                  <strong>Form is stable</strong>
+                  <p>Card raises slightly and exposes the next action.</p>
+                </div>
               </div>
             </article>
-            <article class="type-card">
-              <h3>Typography</h3>
-              <p class="display">Training intelligence</p>
-              <p class="body-copy">Clear hierarchy for dense data, product storytelling and compact mobile controls.</p>
-            </article>
           </div>
-        </section>
-
-        <section class="late-interlude-section" aria-label="Immersive rowing visual">
-          <figure class="interlude-poster">
-            <img src={`${media}/interlude-2.jpg`} alt="Gymera Ruderszene auf dem Wasser als immersive Trainingswelt" loading="lazy" />
-            <figcaption>Immersive training world · Rudern, Wasser, Konzentration und AI-Fitness als Erlebnisbild</figcaption>
-          </figure>
         </section>
 
         <section class="result">
@@ -1648,24 +1600,30 @@ const coverageSlides = [
     box-shadow: 0 26px 80px rgba(42, 59, 88, .12);
     margin-top: 48px;
     overflow: hidden;
+    padding: clamp(14px, 2vw, 24px);
   }
   .rescue-artifact-grid {
-    background: #05070a;
+    background: #fff;
     display: grid;
-    gap: 1px;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+    gap: clamp(10px, 1.5vw, 18px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .rescue-artifact-grid img {
-    aspect-ratio: 16 / 10;
-    background: #05070a;
+    aspect-ratio: 4 / 3;
+    background: #f5f7fb;
+    border: 1px solid rgba(42, 59, 88, .12);
+    border-radius: 6px;
     height: 100%;
+    min-height: 0;
     object-fit: contain;
     object-position: center;
-    padding: clamp(8px, 1.4vw, 18px);
+    padding: clamp(10px, 1.6vw, 22px);
     width: 100%;
   }
   .rescue-showcase figcaption {
-    background: #05070a;
+    background: #fff;
+    color: rgba(5, 7, 10, .68);
+    padding: 18px 4px 0;
   }
   .render-gallery {
     display: grid;
@@ -1956,13 +1914,6 @@ const coverageSlides = [
     line-height: 1.58;
     margin-top: 14px;
   }
-  .technical-story-section {
-    background:
-      radial-gradient(circle at 16% 10%, rgba(159, 92, 255, .18), transparent 30%),
-      radial-gradient(circle at 82% 18%, rgba(80, 237, 220, .14), transparent 28%),
-      linear-gradient(180deg, #05070a 0%, #0a1018 56%, #05070a 100%);
-    color: #fff;
-  }
   .technical-infographic-section,
   .technical-motion-section {
     background:
@@ -1976,7 +1927,6 @@ const coverageSlides = [
       radial-gradient(circle at 84% 20%, rgba(80, 237, 220, .14), transparent 28%),
       linear-gradient(180deg, #05070a 0%, #0a1018 58%, #05070a 100%);
   }
-  .technical-story-section .section-copy > p:last-child,
   .technical-infographic-section .section-copy > p:last-child,
   .technical-motion-section .section-copy > p:last-child {
     color: rgba(255, 255, 255, .68);
@@ -2229,28 +2179,67 @@ const coverageSlides = [
     gap: 36px;
     grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
   }
-  .flow-section {
-    background: #fff;
+  .media-break {
+    background: #05070a;
+    min-height: min(88vh, 860px);
+    overflow: hidden;
+    padding: 0 !important;
+    position: relative;
+  }
+  .media-break::after {
+    background:
+      linear-gradient(0deg, rgba(5, 7, 10, .38), rgba(5, 7, 10, .08) 42%, rgba(5, 7, 10, 0) 72%),
+      radial-gradient(circle at 50% 44%, rgba(255, 255, 255, .05), transparent 46%);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+  }
+  .media-break > img {
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    width: 100%;
+  }
+  .media-break video {
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, .22);
+    border-radius: var(--radius);
+    bottom: clamp(18px, 3vw, 38px);
+    box-shadow: 0 28px 90px rgba(5, 7, 10, .42);
+    position: absolute;
+    right: clamp(18px, 4vw, 56px);
+    width: min(32vw, 380px);
+    z-index: 3;
+  }
+  .late-interlude-section {
+    min-height: min(84vh, 820px);
+  }
+  .media-break-rowing::before {
+    background: radial-gradient(ellipse at 82% 78%, rgba(5, 7, 10, .64), rgba(5, 7, 10, .34) 18%, transparent 42%);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
+  }
+  .media-break-rowing::after {
+    background: none;
   }
   .figma-system-section {
     background:
       radial-gradient(circle at 16% 8%, rgba(159, 92, 255, .12), transparent 26%),
       radial-gradient(circle at 86% 20%, rgba(49, 137, 255, .1), transparent 26%),
       #f7faff;
-  }
-  .context-frame {
-    background: #05070a;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    box-shadow: 0 26px 80px rgba(42, 59, 88, .16);
-    margin-top: 46px;
     overflow: hidden;
+    position: relative;
   }
-  .context-frame img {
-    aspect-ratio: 21 / 9;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
+  .figma-system-section > * {
+    position: relative;
+    z-index: 1;
   }
   .homepage-scroll-frame {
     background: #05070a;
@@ -2317,9 +2306,6 @@ const coverageSlides = [
   }
   .product-stage-frame {
     margin-top: 18px;
-  }
-  .figma-motion-insert {
-    margin-top: 28px;
   }
   .brand-map-section {
     background: #05070a;
@@ -2428,6 +2414,23 @@ const coverageSlides = [
     line-height: 1.48;
     margin-top: 8px;
   }
+  .brand-type-card {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: var(--radius);
+    color: #fff;
+    margin-top: 2px;
+    overflow: hidden;
+    padding: 0;
+  }
+  .brand-type-card img {
+    background: #05070a;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    padding: clamp(14px, 2vw, 24px);
+    width: 100%;
+  }
   .brand-color-heading p,
   .usage-stage-copy p {
     color: rgba(255, 255, 255, .68);
@@ -2436,7 +2439,7 @@ const coverageSlides = [
     max-width: 760px;
   }
   .brand-story-grid {
-    align-items: start;
+    align-items: stretch;
     display: grid;
     gap: 28px;
     grid-template-columns: minmax(260px, .72fr) minmax(0, 1.28fr);
@@ -2447,12 +2450,14 @@ const coverageSlides = [
     border: 0;
     border-radius: var(--radius);
     display: grid;
+    min-height: min(74vh, 720px);
     overflow: hidden;
   }
   .brand-artifact img {
     align-self: center;
     background: transparent;
     border-radius: 0;
+    height: 100%;
     justify-self: center;
     max-height: min(74vh, 720px);
     object-fit: contain;
@@ -2468,42 +2473,116 @@ const coverageSlides = [
   }
   .history-artifact img {
     aspect-ratio: 4617 / 2828;
-    max-height: none;
+    max-height: min(74vh, 720px);
     width: 100%;
   }
-  .map-pan-frame {
-    background: #fff;
+  .sitemap-graph-frame {
+    background:
+      radial-gradient(circle at 70% 22%, rgba(80, 161, 244, .16), transparent 32%),
+      radial-gradient(circle at 24% 72%, rgba(229, 90, 242, .14), transparent 32%),
+      #05070a;
     border: 1px solid rgba(255, 255, 255, .16);
     border-radius: var(--radius);
     box-shadow: 0 30px 90px rgba(0, 0, 0, .28);
     margin-top: 28px;
     overflow: hidden;
+    position: relative;
   }
-  .map-pan-track {
-    --map-slide-width: 260%;
-    animation: mapPan 38s linear infinite;
-    display: block;
-    height: min(72vh, 720px);
-    overflow: hidden;
+  .sitemap-graph-logo {
+    filter: invert(1);
+    left: 50%;
+    opacity: .055;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(82%, 980px);
+    z-index: 0;
+  }
+  .sitemap-graph {
+    aspect-ratio: 16 / 9;
+    min-height: min(72vh, 720px);
     position: relative;
     width: 100%;
   }
-  .map-pan-track img {
+  .sitemap-lines {
     height: 100%;
-    left: 0;
-    max-width: none;
-    object-fit: contain;
-    object-position: left center;
+    inset: 0;
     position: absolute;
-    top: 0;
-    transform: translateX(0);
-    width: var(--map-slide-width);
+    width: 100%;
+    z-index: 1;
   }
-  .map-pan-track img:nth-child(2) {
-    left: var(--map-slide-width);
+  .sitemap-lines path {
+    fill: none;
+    stroke: rgba(90, 242, 216, .2);
+    stroke-linecap: round;
+    stroke-width: .28;
   }
-  .map-pan-frame figcaption {
-    background: #05070a;
+  .sitemap-lines path:nth-child(2) {
+    stroke: rgba(80, 161, 244, .22);
+  }
+  .sitemap-lines path:nth-child(3) {
+    stroke: rgba(229, 90, 242, .18);
+    stroke-dasharray: 1.8 1.6;
+  }
+  .graph-node {
+    background: rgba(8, 13, 20, .74);
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 999px;
+    box-shadow: 0 18px 56px rgba(0, 0, 0, .24);
+    color: #fff;
+    display: grid;
+    gap: 3px;
+    left: var(--x);
+    min-width: 138px;
+    padding: 12px 16px;
+    position: absolute;
+    text-align: center;
+    top: var(--y);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    backdrop-filter: blur(14px);
+  }
+  .graph-node::before {
+    background: #5af2d8;
+    border-radius: 50%;
+    box-shadow: 0 0 28px rgba(90, 242, 216, .68);
+    content: "";
+    height: 7px;
+    left: 50%;
+    position: absolute;
+    top: -4px;
+    transform: translateX(-50%);
+    width: 7px;
+  }
+  .graph-node span {
+    color: rgba(255, 255, 255, .48);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .graph-node strong {
+    font-size: 13px;
+    line-height: 1.1;
+  }
+  .graph-node-core {
+    background:
+      linear-gradient(135deg, rgba(80, 161, 244, .42), rgba(229, 90, 242, .32)),
+      rgba(8, 13, 20, .82);
+    border-color: rgba(255, 255, 255, .28);
+    min-width: 170px;
+    padding: 18px 22px;
+  }
+  .graph-node-core strong {
+    font-size: 22px;
+  }
+  .graph-node-small {
+    min-width: 126px;
+    padding: 10px 14px;
+  }
+  .sitemap-graph-frame figcaption {
+    background: rgba(5, 7, 10, .92);
   }
   .interlude-section {
     background: #05070a;
@@ -2665,15 +2744,72 @@ const coverageSlides = [
     z-index: 4;
   }
   .coverage-showroom-stage {
-    background: transparent;
+    background:
+      radial-gradient(ellipse at 50% 78%, rgba(49, 137, 255, .12), transparent 48%),
+      transparent;
     border-radius: var(--radius);
     box-shadow: none;
     margin-top: 46px;
+    overflow: visible;
+    padding: clamp(28px, 4vw, 58px) clamp(12px, 3vw, 34px) clamp(28px, 4vw, 58px);
+  }
+  .laptop-mockup {
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, .98), rgba(227, 235, 245, .92)),
+      #f9fbff;
+    border: 1px solid rgba(5, 7, 10, .1);
+    border-radius: 22px;
+    box-shadow:
+      0 34px 100px rgba(42, 59, 88, .22),
+      0 12px 32px rgba(42, 59, 88, .12),
+      inset 0 1px 0 rgba(255, 255, 255, .9);
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 13px;
+    position: relative;
+  }
+  .laptop-mockup::before {
+    background: linear-gradient(180deg, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0));
+    border-radius: inherit;
+    content: "";
+    height: 46%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+  .laptop-topbar {
+    align-items: center;
+    display: flex;
+    gap: 6px;
+    min-height: 18px;
+    padding: 0 4px 10px;
+  }
+  .laptop-topbar span {
+    background: rgba(5, 7, 10, .22);
+    border-radius: 50%;
+    height: 7px;
+    width: 7px;
+  }
+  .laptop-screen {
+    background:
+      radial-gradient(circle at 18% 8%, rgba(80, 161, 244, .2), transparent 38%),
+      linear-gradient(180deg, #dceeff, #cfe4fa);
+    border: 1px solid rgba(5, 7, 10, .14);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .8);
     overflow: hidden;
+    padding: clamp(14px, 2.4vw, 28px);
+    position: relative;
+    z-index: 1;
   }
   .coverage-slider {
     aspect-ratio: 1544 / 911;
     background: transparent;
+    border-radius: 6px;
+    overflow: hidden;
     position: relative;
   }
   .coverage-slider img {
@@ -2689,11 +2825,8 @@ const coverageSlides = [
   .auto-slider img:nth-child(4) { animation-delay: 6s; }
   .auto-slider img:nth-child(5) { animation-delay: 8s; }
   .auto-slider img:nth-child(6) { animation-delay: 10s; }
-  .rescue-slider img:nth-child(1),
   .feature-bridge-slider img:nth-child(1) { animation-delay: 0s; }
-  .rescue-slider img:nth-child(2),
   .feature-bridge-slider img:nth-child(2) { animation-delay: 3s; }
-  .rescue-slider img:nth-child(3),
   .feature-bridge-slider img:nth-child(3) { animation-delay: 6s; }
   .coverage-slider img:nth-child(1) { animation-delay: 0s; }
   .coverage-slider img:nth-child(2) { animation-delay: 1s; }
@@ -2708,6 +2841,15 @@ const coverageSlides = [
   .usage-slider-light img:nth-child(4) { animation-delay: 12s; }
   .coverage-section {
     background: transparent;
+  }
+  .render-background-section {
+    background:
+      linear-gradient(90deg, rgba(5, 7, 10, .8), rgba(5, 7, 10, .16) 42%, rgba(5, 7, 10, .82)),
+      linear-gradient(180deg, rgba(5, 7, 10, .1), rgba(5, 7, 10, .64)),
+      var(--render-bg);
+    background-position: center;
+    background-size: cover;
+    min-height: min(78vh, 760px);
   }
   .einsatz-layout {
     display: grid;
@@ -3130,7 +3272,7 @@ const coverageSlides = [
     .brand-color-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .brief-section, .motor-system-stage, .technical-video-layout, .rescue-artifact-grid { grid-template-columns: 1fr; }
     .figma-screen-grid { grid-template-columns: 1fr; }
-    .map-pan-track { height: min(62vh, 620px); }
+    .sitemap-graph { min-height: min(62vh, 620px); }
     .interlude-poster { min-height: min(76vh, 720px); }
     .interface-stage, .kit-grid, .einsatz-layout { grid-template-columns: 1fr; }
     .phone-mock { max-width: 360px; }
@@ -3145,13 +3287,53 @@ const coverageSlides = [
     .case-content { overflow: hidden; }
     .case-content > section { max-width: 100vw; padding-left: 18px; padding-right: 18px; width: 100%; }
     .case-content > section.hero { padding-left: 0; padding-right: 0; }
+    .hero-sequence {
+      --hero-mobile-copy-height: 650px;
+      min-height: 1260px;
+    }
+    .hero-sequence::before {
+      top: var(--hero-mobile-copy-height);
+    }
+    .hero-sequence-bg,
+    .hero-media .hero-sequence-video,
+    .hero-media .hero-sequence-frame {
+      bottom: 0;
+      height: calc(100% - var(--hero-mobile-copy-height));
+      top: var(--hero-mobile-copy-height);
+    }
+    .hero-media .hero-sequence-video,
+    .hero-media .hero-sequence-frame {
+      object-position: center top;
+    }
+    .hero-media .hero-sequence-logo {
+      top: calc(var(--hero-mobile-copy-height) + 170px);
+      width: 120%;
+    }
+    .hero-sequence-copy {
+      background: linear-gradient(180deg, #000 0%, #000 82%, rgba(0, 0, 0, 0) 100%);
+      left: 0;
+      max-width: none;
+      padding: 38px 22px 54px;
+      right: 0;
+      text-shadow: none;
+      top: 0;
+    }
+    .hero-sequence-copy h2 {
+      font-size: clamp(48px, 13vw, 60px);
+      line-height: .92;
+      max-width: 100%;
+    }
+    .hero-sequence-copy p {
+      font-size: 16px;
+      line-height: 1.55;
+      max-width: 100%;
+    }
     .hero-copy, .contribution-section, .highlights, .result { grid-template-columns: minmax(0, 1fr); }
     .hero-copy > *, .section-copy > *, .result-copy > * { min-width: 0; max-width: 100%; }
     .hero-copy .eyebrow, .contribution-grid, .highlight-grid { grid-column: 1; }
     .quick-grid, .contribution-grid, .segment-grid, .metric-grid, .dashboard-layout, .highlight-grid, .proof-grid, .flow-grid, .figma-screen-grid, .brand-map-grid, .usage-compare-grid, .coverage-layout, .interlude-section, .brief-grid, .source-grid, .immersion-grid, .brand-story-grid, .einsatz-layout, .motor-system-stage, .technical-process-grid, .technical-video-layout, .brand-color-grid, .brand-gradient-grid { grid-template-columns: 1fr; }
     .section-number { display: none; }
     .hero-media img, .wide-frame img { aspect-ratio: 4 / 3; }
-    .context-frame img { aspect-ratio: 4 / 3; }
     .figma-screen-grid img { aspect-ratio: 4 / 3; }
     .figma-screen-grid figcaption { min-height: 0; }
     .brand-color-stage { padding: 14px; }
@@ -3163,8 +3345,29 @@ const coverageSlides = [
     .brand-gradient-swatch {
       min-height: 112px;
     }
-    .map-pan-track { height: 360px; }
-    .map-pan-track { --map-slide-width: 420%; }
+    .media-break {
+      min-height: 560px;
+    }
+    .media-break video {
+      bottom: 14px;
+      right: 14px;
+      width: min(58vw, 260px);
+    }
+    .sitemap-graph {
+      aspect-ratio: auto;
+      min-height: 620px;
+    }
+    .graph-node {
+      min-width: 104px;
+      padding: 8px 10px;
+    }
+    .graph-node strong { font-size: 11px; }
+    .graph-node span { font-size: 8px; }
+    .graph-node-core {
+      min-width: 128px;
+      padding: 12px 14px;
+    }
+    .graph-node-core strong { font-size: 17px; }
     .interlude-section { gap: 28px; }
     .interlude-poster { min-height: 520px; }
     .interlude-poster video {

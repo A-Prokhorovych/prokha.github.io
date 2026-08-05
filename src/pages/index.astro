@@ -493,7 +493,7 @@ const brands = [
     border-top: 1px solid var(--line);
     display: grid;
     grid-column: 1 / -1;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1.45fr)) minmax(320px, 1.65fr);
   }
 
   .proof div { border-right: 1px solid var(--line); padding: 22px 20px 24px 0; }
@@ -667,6 +667,7 @@ const brands = [
     .concept-label { display: none; }
     .site-header { grid-template-columns: 1fr auto auto; }
     .hero { grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr); }
+    .proof { grid-template-columns: repeat(3, minmax(0, 1.2fr)) minmax(280px, 2.4fr); }
     .hero-intro { align-items: start; grid-template-columns: 1fr; }
     .hero-actions { justify-content: flex-start; }
     .section-heading > div { align-items: start; grid-template-columns: 1fr; }
